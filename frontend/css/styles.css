@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #6c5ce7;
+    overflow-x: hidden;
+}
+p {
+    color: black;
+}
+
+.btn-hola {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0.5rem 1rem;
+    border: 2px solid #6c5ce7;
+    background-color: transparent;
+    color: #6c5ce7;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.btn-hola:hover {
+    background-color: #6c5ce7;
+    color: #fff;
+}
+
+#avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #6c5ce7;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#avatar:hover {
+    transform: scale(1.05);
+}
+
+#inicio {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+/* Sección de Proyectos */
+#proyectos {
+    text-align: center;
+    padding: 2rem;
+}
+
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.proyecto-card {
+    background-color: #fff;
+    border: 2px solid #6c5ce7;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-proyecto {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #6c5ce7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.btn-proyecto:hover {
+    background-color: #4c42b0;
+}
+
+/* Sección de Contacto */
+#contacto {
+    text-align: center;
+    padding: 2rem;
+}
+
+.form-contacto {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #6c5ce7;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-enviar{
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    border: 2px solid #6c5ce7;
+    color: #6c5ce7;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    
+}
+
+.btn-enviar:hover {
+    background-color: #6c5ce7;
+    color: #fff;
+}
