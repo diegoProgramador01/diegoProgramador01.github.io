@@ -1,4 +1,22 @@
-/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet');
+
+:root{
+    --color-fondo: #2E3532;
+    --color-primario: #c7cedb;
+    --color-texto:#81a486;
+    --tipografia: 'Roboto Mono', serif;
+}
+
+.dark-theme {
+    --color-fondo: #edeec0;
+    --color-primario: #433e0e;
+    --color-texto:#81a486;
+   
+}
+
+
+/* Ajustes generales */
 * {
     margin: 0;
     padding: 0;
@@ -6,41 +24,38 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--tipografia); 
+    color: var(--color-primario);
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #6c5ce7;
+    background-color: var(--color-fondo);
+    color: var(--color-primario);
     overflow-x: hidden;
 }
 p {
-    color: black;
+    font-family: var(--tipografia); 
+    color: var(--color-texto);
 }
 
 .btn-hola {
-    position: absolute;
-    top: 20px;
-    right: 20px;
     padding: 0.5rem 1rem;
-    border: 2px solid #6c5ce7;
-    background-color: transparent;
-    color: #6c5ce7;
+    border: 2px solid var(--color-primario);
+    background-color: var(--color-texto);
+    color: var(--color-primario);
     text-decoration: none;
     border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 600;
     transition: all 0.5s ease;
 }
 
 .btn-hola:hover {
-    background-color: #6c5ce7;
-    color: #fff;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
 }
 
 #avatar {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 5px solid #6c5ce7;
+    border: 5px solid var(--color-primario);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     margin-bottom: 1rem;
@@ -60,11 +75,43 @@ p {
     height: 100vh;
 }
 
+.subrayado{
+    color: var(--color-primario);
+    font-weight: bolder;
+}
+
+input:-webkit-autofill, 
+textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px var(--color-texto) inset; /* Fondo igual al campo*/
+    -webkit-text-fill-color: var(--color-primario); /* Color del texto */
+}
+
+#theme-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#theme-icon:active {
+    transform: scale(1.2);
+}
+
+.top-bar {
+    display: grid;
+    grid-template-columns: auto auto; /* Dos columnas ajustadas al contenido */
+    gap: 10px; /* Espacio entre las columnas */
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Posición a la derecha */
+    justify-content: flex-end; /* Alinea los elementos desde la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+}
 
 /* Sección de Proyectos */
 #proyectos {
     text-align: center;
-    padding: 2rem;
+    padding: 10rem;
 }
 
 .proyectos-container {
@@ -75,8 +122,9 @@ p {
 }
 
 .proyecto-card {
-    background-color: #fff;
-    border: 2px solid #6c5ce7;
+    background-color: #3b3e3d;
+    margin-top: 1rem;
+    border: 2px solid var(--color-primario);
     border-radius: 8px;
     padding: 1.5rem;
     max-width: 300px;
@@ -94,21 +142,36 @@ p {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #6c5ce7;
-    color: #fff;
+    background-color: var(--color-texto);
+    color: var(--color-primario);
     text-decoration: none;
     border-radius: 50px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.5s ease;
+    
 }
 
 .btn-proyecto:hover {
-    background-color: #4c42b0;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
+}
+
+#btn-ver-proyectos{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--color-primario);
+    background-color: var(--color-texto);
+    color: var(--color-primario);
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    margin-top: 0.5rem;
 }
 
 /* Sección de Contacto */
 #contacto {
+    font-family: var(--tipografia); 
     text-align: center;
     padding: 2rem;
 }
@@ -122,11 +185,18 @@ p {
 }
 
 input, textarea {
+    font-family: var(--tipografia);
     width: 100%;
     padding: 0.75rem;
-    border: 2px solid #6c5ce7;
+    border: 2px solid var(--color-primario);
+    background-color: var(--color-texto);
+    color: var(--color-primario);
     border-radius: 5px;
     font-size: 1rem;
+}
+
+input::placeholder, textarea::placeholder {
+    color: var(--color-primario);
 }
 
 .btn-enviar{
@@ -134,8 +204,9 @@ input, textarea {
     font-size: 1.2rem;
     padding: 0.5rem 0.5rem;
     cursor: pointer;
-    border: 2px solid #6c5ce7;
-    color: #6c5ce7;
+    border: 2px solid var(--color-primario);
+    background-color: var(--color-texto);
+    color: var(--color-primario);
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.5s ease;
@@ -143,6 +214,9 @@ input, textarea {
 }
 
 .btn-enviar:hover {
-    background-color: #6c5ce7;
-    color: #fff;
+    color: var(--color-texto);
+    background-color: var(--color-primario);
 }
+
+
+

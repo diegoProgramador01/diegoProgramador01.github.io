@@ -5,15 +5,15 @@ const avatar = document.getElementById("avatar");
 const hoverAnimation = gsap.timeline({ paused: true });
 hoverAnimation
     .to(avatar, {
-        scale: 15, // Agrandar el avatar
+        scale: 10, // Agrandar el avatar
         opacity: 0, // Desvanecer el avatar
-        duration: 2.5, // Tiempo para completar la animación
+        duration: 2.0, // Tiempo para completar la animación
         ease: "power2.inOut", // Suavidad
     })
     .call(() => {
         // Redirigir solo si el cursor sigue sobre el avatar
         if (isHovering) {
-            window.location.href = "proyectos.html";
+            window.location.href = "sobre_mi.html";
         }
     });
 

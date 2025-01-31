@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Diego Ordóñez Tejada | FullStack</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -11,23 +11,36 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Icono Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
 </head>
 <body>
-    <a href="contacto.html" class="btn-hola">¡Dime hola!</a>
+    
+    <div class="top-bar">
+        <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
+        <a href="contacto.html" class="btn-hola">¡Dime hola!</a>
+    </div>
+    
 
     <section id="inicio">
         <img id="avatar" src="images/avatar.png" alt="Avatar">
         <div>
             <h2>¡Hola! Soy Diego Ordóñez Tejada</h2>
-            <p>Bienvenido a mi página web. Descubre mis proyectos y más sobre mí.</p>
+            <p>Soy un desarrollador <span class="subrayado">Junior FullStack.</span> Manten el ratón sobre mi avatar para saber <span class="subrayado">sobre mi.</span> </p>
+            <a href="proyectos.html" id="btn-ver-proyectos">Ver proyectos</a>
         </div>
     </section>
 
-    <!-- GSAP Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- Archivo JS principal -->
     <script src="js/avatar.js"></script>
+    <script src="js/tema.js"></script>
 </body>
 </html>
