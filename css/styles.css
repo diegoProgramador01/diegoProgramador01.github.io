@@ -4,14 +4,23 @@
 :root{
     --color-fondo: #2E3532;
     --color-primario: #c7cedb;
+    --color-secundario: #3b3e3d;
     --color-texto:#81a486;
+    --color-texto-oscuro: #81a486;
     --tipografia: 'Roboto Mono', serif;
+    --particulas-color: #c7cedb;
+    --particulas-linea-color: rgb(199, 206, 219);
 }
 
 .dark-theme {
     --color-fondo: #edeec0;
-    --color-primario: #433e0e;
+    --color-primario: #29260f;
+    --color-secundario: #d1d5c3;
     --color-texto:#81a486;
+    --particulas-color: #433e0e;
+    --particulas-linea-color: rgb(67, 62, 14);
+
+    --color-texto-oscuro: #29260f;
    
 }
 
@@ -34,6 +43,10 @@ body {
 p {
     font-family: var(--tipografia); 
     color: var(--color-texto);
+}
+
+#p-oscuro {
+    color: var(--color-texto-oscuro);
 }
 
 .btn-hola {
@@ -122,7 +135,7 @@ textarea:-webkit-autofill {
 }
 
 .proyecto-card {
-    background-color: #3b3e3d;
+    background-color: var(--color-secundario);
     margin-top: 1rem;
     border: 2px solid var(--color-primario);
     border-radius: 8px;
@@ -217,6 +230,85 @@ input::placeholder, textarea::placeholder {
     color: var(--color-texto);
     background-color: var(--color-primario);
 }
+
+/* Sección de Fondo animado */
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pone el canvas al detrás de todo */
+}
+
+/* Sección de Sobre mí */
+.imagen-derecha {
+    position: absolute;
+    top: 0px; /* Ajusta la distancia desde el borde superior */
+    right: 0px; /* Ajusta la distancia desde el borde derecho */
+    width: 30rem; /* Ocupa la mitad del ancho de la pantalla */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    border-bottom-left-radius: 5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltar */
+    z-index: -1; /* Asegúrate de que la imagen quede por encima del texto */
+}
+
+/* General styles for the section */
+#about {
+    font-family: var(--tipografia);
+    text-align: left; /* Align text to the left */
+    max-width: 800px;
+    margin: 100px auto; /* Center the section horizontally and add spacing */
+    color: var(--color-primario); /* Subtle gray text color */
+    position: relative;
+}
+
+/* Title (ABOUT) */
+#about h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #232323; /* Slightly darker for emphasis */
+    margin: 0;
+    letter-spacing: 2px; /* Adds spacing between letters */
+}
+
+/* Divider line */
+#about .divider {
+    width: 100%;
+    height: 2px;
+    background-color: #232323; /* Matches the title color */
+    margin: 10px 0 20px; /* Adds spacing between the title and text */
+    border: none;
+}
+
+/* Paragraph */
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--color-texto); /* Softer color for text */
+    margin-bottom: 20px;
+    word-spacing: 2px; /* Adds spacing between words for readability */
+}
+
+/* Resume link */
+.resume-link {
+    font-size: 1rem;
+    text-decoration: none; /* Removes underline */
+    color: var(--color-primario); /* Matches the title color */
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Hover effect for the link */
+.resume-link:hover {
+    color: var(--color-texto); /* Subtle blue hover effect */
+}
+
+
 
 
 
