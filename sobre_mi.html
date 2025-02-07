@@ -16,33 +16,42 @@
 
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sobre_mi.css">
+
 
     <!-- Icono Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-
 </head>
 <body>
-    <div style="position: relative;">
-        <img src="images/foto-mia.png" alt="Mi Foto" class="imagen-derecha">
+    <div class="container">
+        <!-- Imagen a la derecha -->
+        <div class="image-section">
+            <img src="images/foto-mia.png" alt="Mi Foto" class="foto">
+        </div>
+
+        <!-- Sección de texto -->
+        <div class="text-section">
+            <h1>Sobre Mí</h1>
+            <hr>
+            <p>
+                ¡Hola! Soy Diego Ordóñez Tejada, un desarrollador Junior FullStack con pasión por la programación y el diseño web.
+                Me encanta aprender nuevas tecnologías, crear proyectos innovadores y trabajar en equipo para resolver problemas
+                de forma creativa.
+            </p>
+            <p>
+                Mi objetivo es seguir creciendo profesionalmente, explorando nuevos desafíos en el mundo del desarrollo de software
+                y dejando mi huella en cada proyecto que realizo.
+            </p>
+            <a href="curriculum3D.html" class="resume-link">↓ Currículum</a>
+        </div>
     </div>
+
     <div class="top-bar">
-        <i id="theme-icon" class="fa-solid fa-circle-half-stroke" style="color: #c7cedb;"></i>
+        <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
         <a href="index.html" class="btn-hola">Volver al inicio</a>
     </div>
 
-    <section id="about">
-        <h1>Sobre Mí</h1>
-        <hr class="divisors">
-
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;" id="p-oscuro">
-                ¡Hola! Soy Diego Ordóñez Tejada, un desarrollador Junior FullStack con pasión por la programación y el diseño web. Me encanta aprender nuevas tecnologías, crear proyectos innovadores y trabajar en equipo para resolver problemas de forma creativa.
-            </p>
-            <p style="font-size: 1.2rem; max-width: 600px; margin: 20px auto;" id="p-oscuro">
-                Mi objetivo es seguir creciendo profesionalmente, explorando nuevos desafíos en el mundo del desarrollo de software y dejando mi huella en cada proyecto que realizo.
-            </p>
-            <a href="curriculum3D.html" class="resume-link">↓ Currículum</a>
-    </section>
     <script src="js/tema.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
 }
 
 
-/* Ajustes generales */
+/* Ajustes generales  pantallas grandes*/
 * {
     margin: 0;
     padding: 0;
@@ -242,71 +242,6 @@ canvas {
     z-index: -1; /* Pone el canvas al detrás de todo */
 }
 
-/* Sección de Sobre mí */
-.imagen-derecha {
-    position: absolute;
-    top: 0px; /* Ajusta la distancia desde el borde superior */
-    right: 0px; /* Ajusta la distancia desde el borde derecho */
-    width: 30rem; /* Ocupa la mitad del ancho de la pantalla */
-    height: auto; /* Mantiene las proporciones de la imagen */
-    border-bottom-left-radius: 5rem;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Añade sombra para resaltar */
-    z-index: -1; /* Asegúrate de que la imagen quede por encima del texto */
-}
-
-/* General styles for the section */
-#about {
-    font-family: var(--tipografia);
-    text-align: left; /* Align text to the left */
-    max-width: 800px;
-    margin: 100px auto; /* Center the section horizontally and add spacing */
-    color: var(--color-primario); /* Subtle gray text color */
-    position: relative;
-}
-
-/* Title (ABOUT) */
-#about h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #232323; /* Slightly darker for emphasis */
-    margin: 0;
-    letter-spacing: 2px; /* Adds spacing between letters */
-}
-
-/* Divider line */
-#about .divider {
-    width: 100%;
-    height: 2px;
-    background-color: #232323; /* Matches the title color */
-    margin: 10px 0 20px; /* Adds spacing between the title and text */
-    border: none;
-}
-
-/* Paragraph */
-#about p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: var(--color-texto); /* Softer color for text */
-    margin-bottom: 20px;
-    word-spacing: 2px; /* Adds spacing between words for readability */
-}
-
-/* Resume link */
-.resume-link {
-    font-size: 1rem;
-    text-decoration: none; /* Removes underline */
-    color: var(--color-primario); /* Matches the title color */
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: color 0.3s ease;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-/* Hover effect for the link */
-.resume-link:hover {
-    color: var(--color-texto); /* Subtle blue hover effect */
-}
 
 
 
