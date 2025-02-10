@@ -6,8 +6,7 @@
     <title>Currículum | Diego Ordóñez</title>
 
     <!-- Icono Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename="images/favicon.ico")}}" type="image/x-icon">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -82,7 +81,7 @@
     
     <!-- Botón para cambiar tema -->
     <i id="theme-icon" class="fa-solid fa-circle-half-stroke"></i>
-    <a href="sobre_mi.html" id="theme-btn"><i class="fa-solid fa-backward"></i></a>
+    <a href="{{ url_for('sobre_mi') }}" id="theme-btn"><i class="fa-solid fa-backward"></i></a>
 
     <script type="module">
         import * as THREE from 'three';
@@ -129,11 +128,17 @@
         });
 
         const textureLoader = new THREE.TextureLoader(loadingManager);
-        const screenTexture = textureLoader.load('images/pantalla.png');
+        const screenTexture = textureLoader.load("{{ url_for('static', filename='images/pantalla.png') }}");
+        // Ajustar filtros para mejorar nitidez
+        screenTexture.minFilter = THREE.LinearFilter; // Suaviza al reducir la textura              
+        screenTexture.magFilter = THREE.NearestFilter; // Mejor nitidez al ampliar
+        screenTexture.anisotropy = renderer.capabilities.getMaxAnisotropy(); // Mejora la calidad de la textura
+       
+
 
         // Cargar modelo GLTF / GLB
         const loader = new GLTFLoader(loadingManager);
-        loader.load('images/game.glb', (gltf) => {
+        loader.load("{{ url_for('static', filename='images/game.glb') }}", (gltf) => {
             const model = gltf.scene;
             model.scale.set(8, 8, 8);
             model.castShadow = true;
@@ -142,7 +147,7 @@
 
             // Agregar imagen de pantalla a la tablet
             const textureLoader = new THREE.TextureLoader();
-            const screenTexture = textureLoader.load('images/pantalla.png'); // Ruta de la imagen
+            const screenTexture = textureLoader.load("{{ url_for('static', filename='images/pantalla.png') }}"); // Ruta de la imagen
 
             const screenMaterial = new THREE.MeshBasicMaterial({ 
                 map: screenTexture 
@@ -178,7 +183,7 @@
 
                 const intersects = raycaster.intersectObject(button);
                 if (intersects.length > 0) {
-                    window.open('images/curriculum.pdf', '_blank'); // Abrir PDF al hacer clic
+                    window.open("{{ url_for('static', filename='images/curriculum.pdf') }}", '_blank'); // Abrir PDF al hacer clic
                 }
             }
 

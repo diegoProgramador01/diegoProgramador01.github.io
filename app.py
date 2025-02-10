@@ -14,6 +14,26 @@ app.config['MAIL_DEFAULT_SENDER'] = 'tu_correo@gmail.com'  # Remitente por defec
 
 mail = Mail(app)
 
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/proyectos')
+def proyectos():
+    return render_template('proyectos.html')
+
+@app.route('/sobre-mi')
+def sobre_mi():
+    return render_template('sobre_mi.html')
+
+@app.route('/curriculum3D')
+def curriculum3D():
+    return render_template('curriculum3D.html')
+
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+
 @app.route('/send_email', methods=['POST'])
 def send_email():
     if request.method == 'POST':
@@ -34,10 +54,6 @@ def send_email():
             flash(f'Error al enviar el mensaje: {e}', 'error')
         
         return redirect(url_for('contacto'))
-
-@app.route('/contacto')
-def contacto():
-    return render_template('contacto.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
