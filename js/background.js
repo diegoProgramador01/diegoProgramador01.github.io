@@ -108,7 +108,7 @@ class Particle {
 // Crear partículas
 function init() {
     particles.length = 0; // Vaciar el array
-    const numberOfParticles = window.innerWidth < 768 ? 50 : 150;
+    const numberOfParticles = window.innerWidth < 768 ? 40 : 150;
     for (let i = 0; i < numberOfParticles; i++) {
         const size = Math.random() * 4 + 1; // Tamaño aleatorio
         const x = Math.random() * canvas.width;
